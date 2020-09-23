@@ -33,14 +33,14 @@ const App = () => {
 
           <Route exact path="/">
           
-            <Main ChangeState={ChangeState}  State={State} text={Data[0].texto} />
+            <Main ChangeState={ChangeState}  State={State} text={Data[0].texto}  />
             
           </Route>
 
 
           <Route exact path="/p457">
           
-            <Main State={State} ChangeState={ChangeState} text={Data[1].texto}/ >
+            <Main State={State} ChangeState={ChangeState} text={Data[1].texto}  link={Data[1].link} />
 
             <Password ChangeState={ChangeState} State={State} />
 
@@ -48,7 +48,7 @@ const App = () => {
 
           <Route exact path="/9r353n7">
 
-            <Main State={State} ChangeState={ChangeState} text={Data[2].texto}/ >
+            <Main State={State} ChangeState={ChangeState} text={Data[2].texto} link={Data[2].link} / >
 
             <Password ChangeState={ChangeState} State={State} />
 
@@ -57,7 +57,7 @@ const App = () => {
 
            <Route exact path="/fu7u23">
 
-              <Main State={State} ChangeState={ChangeState} text={Data[3].texto} fontStyle={"white"} />
+              <Main State={State} ChangeState={ChangeState} text={Data[3].texto}  link={Data[3].link} fontStyle={"white"} />
 
             <Password ChangeState={ChangeState} State={State} />
 
@@ -66,7 +66,7 @@ const App = () => {
 
            <Route exact path="/1nf1n173">
 
-              <Main State={State} ChangeState={ChangeState} text={Data[4].texto} fontStyle={"white"} />
+              <Main State={State} ChangeState={ChangeState} text={Data[4].texto} link={Data[4].link} fontStyle={"white"} />
 
           <Password ChangeState={ChangeState} State={State} />
 

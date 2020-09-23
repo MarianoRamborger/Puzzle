@@ -31,6 +31,13 @@ const Main = (props) => {
         }
         
 
+        { 
+            props.State === "initial" ? null :
+
+                props.link ? <a href={props.link} target="blank" className="message-link"> Mensaje </a>
+                
+                : null
+        }
 
 
         </div>

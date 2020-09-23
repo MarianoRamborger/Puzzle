@@ -14,15 +14,38 @@ const Main = (props) => {
     return(
         <div className="main-div">
 
-        <p className={props.fontStyle}>
+        {/* <p className={props.fontStyle}>
             {
                 props.State === "inicial" ?
-                Data[0].texto : props.text
+                
+                Data[0].texto : 
+                
+                
+                
+                props.text
             
             }
-        </p>
+        </p> */}
 
         
+        {
+            props.State === "inicial" ?
+
+            Data[0].texto.map(data => {
+               return  <p> {data} </p>
+            }) 
+            
+
+            :
+            props.text.map(data => {
+               return <p> {data} </p>
+            }) 
+
+            
+        }
+
+
+
         {
             props.State === "inicial" ?
             <Link to="p457"><button className="main-button" onClick={handleChangeState}> Intentá </button></Link>

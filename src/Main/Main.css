@@ -1,0 +1,43 @@
+.main-div {
+
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 1 !important;
+
+
+    align-content: center;
+    align-items: center
+}
+
+
+
+.main-div p {
+    margin: 10px 10%;
+    text-justify: center;
+    text-justify: auto;
+    color: white;
+    font-size: 25px;
+}
+
+
+.white {
+    color: white;
+}
+
+
+.main-button {
+
+      width: 250px;
+    font-size: 30px;
+    background-color: darkgreen;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 0px ;
+    -webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;
+}
+
+.main-button:hover {
+    background-color: green
+}
+
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}

@@ -8,6 +8,7 @@
     flex-grow: 1;
 }
 
-.end-div h1 {
+.end-div h2 {
     color: white;
+    margin: 5px 10%
 }

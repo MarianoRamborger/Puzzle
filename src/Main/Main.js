@@ -14,38 +14,27 @@ const Main = (props) => {
     return(
         <div className="main-div">
 
-        {/* <p className={props.fontStyle}>
-            {
-                props.State === "inicial" ?
-                
-                Data[0].texto : 
-                
-                
-                
-                props.text
-            
-            }
-        </p> */}
+     
 
         
         {
             props.State === "inicial" ?
 
             Data[0].texto.map(data => {
-               return  <p> {data} </p>
+               return  <p key={Math.random()}> {data} </p>
             }) 
             
 
             :
             props.text.map(data => {
-               return <p> {data} </p>
+               return <p key={Math.random()}> {data} </p>
             }) 
 
             
         }
 
 
-
+        <div className="center-div">
         {
             props.State === "inicial" ?
             <Link to="p457"><button className="main-button" onClick={handleChangeState}> Intentá </button></Link>
@@ -55,13 +44,13 @@ const Main = (props) => {
         
 
         { 
-            props.State === "initial" ? null :
+            props.State === "inicial" ? null :
 
                 props.link ? <a href={props.link} target="blank" className="message-link"> Mensaje </a>
                 
                 : null
         }
-
+        </div>
 
         </div>
     )

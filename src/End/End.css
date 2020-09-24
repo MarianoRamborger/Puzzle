@@ -1,0 +1,13 @@
+.end-div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    flex-grow: 1;
+}
+
+.end-div h1 {
+    color: white;
+}

@@ -1,8 +1,22 @@
 .footer-div {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
 
+    align-content: center;
     min-height: 30px;
-    background-color: #800080
+    background-color: 	#4B0082
 }
 
+
+.logo {
+    width: 200px;
+    margin: 10px
+}
+
+
+.footer-text {
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+
+}

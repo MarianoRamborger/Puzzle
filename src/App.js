@@ -4,6 +4,7 @@ import './App.css';
 import Main from './Main/Main.js'
 import Footer from './Footer/Footer.js'
 import Password from './Password/Password.js'
+import End from './End/End'
 
 import Data from './Data'
 
@@ -72,6 +73,14 @@ const App = () => {
 
           </Route>
 
+
+           <Route exact path="/3nd">
+
+              <End  />
+
+        
+
+          </Route>
 
 
         </Switch>

@@ -1,12 +1,15 @@
 import React from 'react'
 import './Footer.css'
+import logo from './logo.png'
 
 const Footer = () => {
 
     return (
         <div className="footer-div">
 
-        <p> Footer </p>
+        <img src={logo} className="logo" alt="logo" />
+
+        <a href="http://www.marianoram.com" className="footer-text"> Made by MarianoRam </a>
 
         </div>
     )

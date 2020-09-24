@@ -13,7 +13,7 @@ body {
 .app-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 94.8vh;
+  min-height: 86.6vh;
 
 }
 
@@ -42,4 +42,8 @@ body {
 
 .infinite {
   background-color:  #04070e 
+}
+
+.end {
+  background-color: black;
 }

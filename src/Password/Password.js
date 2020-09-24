@@ -3,6 +3,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 import './Password.css'
+import Lock from './lock.png'
 
 
 const Password = (props) => {
@@ -22,19 +23,20 @@ const Password = (props) => {
 
         checkAnswer(false)
 
-        if ((props.State === "past") && (password === "Aleph")) {
+
+        if ((props.State === "past") && (password.toLowerCase() === "aleph")) {
             checkAnswer(true)
         }
-        if (props.State === "present" && password === '3719') {
+        if ((props.State === "present") && (password === '3719')) {
             checkAnswer(true)
         }
-        if (props.State === "present" && password === '3574159') {
+        if ((props.State === "present") && (password === '3574159')) {
             checkAnswer(true)
         }
-        if (props.State === "future" && password === 'Universo Infinito') {
+        if ((props.State === "future") && (password.toLowerCase() === 'universo infinito')) {
             checkAnswer(true)
         }
-        if (props.State === "infinite" && password === 'La meta es descubrir el infinito valor de ti mismo') {
+        if ((props.State === "infinite") && (password.toLowerCase() === 'la meta es descubrir el infinito valor de ti mismo')) {
             checkAnswer(true)
         }
 
@@ -59,6 +61,10 @@ const Password = (props) => {
         if (props.State === "future") {
             props.ChangeState("infinite")
         }
+        
+        if (props.State === "infinite") {
+            props.ChangeState("end")
+        }
 
     }
 
@@ -68,11 +74,28 @@ const Password = (props) => {
             
         <form className="password-form" onSubmit={e => { e.preventDefault(); }}>
 
+
+    
         {
             props.State === "inicial" ? null 
             :
-            <input id="Input" className="password-input " type="text" onChange={HandleChangePasswordText} />
+           
+            <img className="lock-image" src={Lock} alt="Candado" />
+      
         }
+
+
+
+        {
+            props.State === "inicial" ? null 
+            :    
+            <input id="Input" className="password-input " type="text" onChange={HandleChangePasswordText} />
+      
+        }
+
+
+
+       
        
 
         {
@@ -90,7 +113,7 @@ const Password = (props) => {
         {
                 correctAnswer ?
                 props.State === "past" ?
-                    passwordText === "Aleph" ?  <Link to="/9r353n7"> <button type="button" className="password-button correct" onClick={HandleChangeState}> Intentá </button> </Link>
+                    passwordText.toLowerCase() === "aleph" ?  <Link to="/9r353n7"> <button type="button" className="password-button correct" onClick={HandleChangeState}> Intentá </button> </Link>
                         :  null
                 : null
             :null
@@ -111,6 +134,16 @@ const Password = (props) => {
                 correctAnswer ?
                 props.State === "future" ?
                      <Link to="/1nf1n173"> <button type="button" className="password-button correct" onClick={HandleChangeState}> Intentá </button> </Link>
+                       
+                : null
+            :null
+  
+        }
+
+        {
+                correctAnswer ?
+                props.State === "infinite" ?
+                     <Link to="/3nd"> <button type="button" className="password-button correct" onClick={HandleChangeState}> Intentá </button> </Link>
                        
                 : null
             :null

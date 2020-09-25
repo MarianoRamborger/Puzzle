@@ -38,7 +38,6 @@ const App = () => {
             
           </Route>
 
-
           <Route exact path="/p457">
           
             <Main State={State} ChangeState={ChangeState} text={Data[1].texto}  link={Data[1].link} />
@@ -54,7 +53,6 @@ const App = () => {
             <Password ChangeState={ChangeState} State={State} />
 
           </Route>
-
 
            <Route exact path="/fu7u23">
 
@@ -78,10 +76,7 @@ const App = () => {
 
               <End  />
 
-        
-
           </Route>
-
 
         </Switch>
 

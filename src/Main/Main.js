@@ -14,9 +14,6 @@ const Main = (props) => {
     return(
         <div className="main-div">
 
-     
-
-        
         {
             props.State === "inicial" ?
 
@@ -29,10 +26,8 @@ const Main = (props) => {
             props.text.map(data => {
                return <p key={Math.random()}> {data} </p>
             }) 
-
-            
+      
         }
-
 
         <div className="center-div">
         {
@@ -42,7 +37,6 @@ const Main = (props) => {
             null
         }
         
-
         { 
             props.State === "inicial" ? null :
 
@@ -54,8 +48,6 @@ const Main = (props) => {
 
         </div>
     )
-
-
 }
 
 export default Main

@@ -74,17 +74,12 @@ const Password = (props) => {
             
         <form className="password-form" onSubmit={e => { e.preventDefault(); }}>
 
-
-    
         {
             props.State === "inicial" ? null 
-            :
-           
+            :   
             <img className="lock-image" src={Lock} alt="Candado" />
       
         }
-
-
 
         {
             props.State === "inicial" ? null 
@@ -92,11 +87,6 @@ const Password = (props) => {
             <input id="Input" className="password-input " type="text" onChange={HandleChangePasswordText} />
       
         }
-
-
-
-       
-       
 
         {
             props.State !== "inicial" ? 
@@ -109,7 +99,6 @@ const Password = (props) => {
             :null
         }
         
-
         {
                 correctAnswer ?
                 props.State === "past" ?
@@ -150,9 +139,7 @@ const Password = (props) => {
   
         }
 
-
         </form>
-
         </div>
     )
 }
